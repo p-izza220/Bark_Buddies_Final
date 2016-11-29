@@ -1,0 +1,52 @@
+<br>
+<br>
+<h1 id="create_acc"> Create An Account </h1>
+<br>
+<div class="new_owner_form">
+	<%= form_for @owner do |f| %>
+	<fieldset>
+		<legend id="acc_legend"> Enter Account Details: </legend>
+
+			<div class="field">
+				<%= f.label "Username:" %>
+				<%= f.text_field :username, size: 20 %>		
+			</div>
+
+
+			<div class="field">
+				<%= f.label "Contact:" %>
+				<%= f.text_field :contact %>
+			</div>
+
+
+			<div class="field">
+				<%= f.label "Dog name:" %>
+				<%= f.text_field :dog_name %>
+			</div>
+
+
+			<div class="field">
+				<%= f.label "Password:" %>
+				<%= f.password_field :password, autocomplete: "off" %>
+			</div>
+
+
+			<div class="field">
+				<%= f.label :password_confirmation, "Confirm:" %>
+				<%= f.password_field :password_confirmation, autocomplete: "off" %>
+			</div>
+
+
+			<div class="actions" class="submit">
+				<%= f.submit "Create Account" %>
+			</div>
+
+		</fieldset>
+	<% end %>
+</div>
+
+
+
+
+
+
