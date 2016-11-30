@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   patch "/owners/:id"     	=> "owners#update"
   delete "/owners/:id"		=> "owners#destroy"
 
-  get "/sessions/new"		=> "sessions#new", as: "login"
+  get "/sessions"		=> "sessions#new", as: "login"
   post "/sessions"			=> "sessions#create"
-  delete "/sessions/:id"  	=> "sessions#destroy", as: "logout" 
+  delete "/sessions"  	=> "sessions#destroy", as: "logout" 
 
 end

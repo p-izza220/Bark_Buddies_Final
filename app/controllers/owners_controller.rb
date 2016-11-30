@@ -1,6 +1,6 @@
 class OwnersController < ApplicationController
 	def index
-		@owners = Owner.all
+		@owners = Owner.where(last_checkin: 2.hours.ago..Time.now).order(:last_checkin => :desc)
 	end
 
 	def new
