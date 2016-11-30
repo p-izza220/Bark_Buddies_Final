@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  # get 'welcome/index'
+
   # get 'sessions/new'
 
   # get 'sessions/create'
@@ -14,7 +17,10 @@ Rails.application.routes.draw do
   # get 'owners/edit'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "/owners"				=> "owners#index", as: "owners"
+  get "/"             => "welcome#index", as: "/"
+
+
+  get "/owners"				  => "owners#index", as: "owners"
   get "/owners/new"			=> "owners#new", as: "owners_new"
   post "/owners"			=> "owners#create"
   get "/owners/:id"			=> "owners#show", as: "owners_show"

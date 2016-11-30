@@ -6,6 +6,7 @@ class CreateOwners < ActiveRecord::Migration[5.0]
       t.string :contact
       t.string :dog_name
       t.binary :profile_pic
+      t.datetime :last_checkin
 
       t.timestamps
     end

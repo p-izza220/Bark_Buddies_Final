@@ -3,7 +3,7 @@
 <h1 id="create_acc"> Create An Account </h1>
 <br>
 <div class="new_owner_form">
-	<%= form_for @owner do |f| %>
+	<%= form_for @owner, html: {multipart: true} do |f| %>
 	<fieldset>
 		<legend id="acc_legend"> Enter Account Details: </legend>
 
@@ -24,6 +24,11 @@
 				<%= f.text_field :dog_name %>
 			</div>
 
+			<div class="field">
+				<%= f.label "Profile Picture:" %>
+				<%= f.file_field :avatar %>
+			</div>
+
 
 			<div class="field">
 				<%= f.label "Password:" %>
@@ -38,15 +43,10 @@
 
 
 			<div class="actions" class="submit">
-				<%= f.submit "Create Account" %>
+				<div id="sub"><%= f.submit "Create Account" %></div>
 			</div>
 
 		</fieldset>
 	<% end %>
 </div>
-
-
-
-
-
 

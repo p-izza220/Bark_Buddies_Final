@@ -18,6 +18,23 @@
 	background-color: #6ED1E5;
 }
 
+/* Navbar styles */
+#navlinks{
+	text-align: right;
+	margin-right: 20px;
+}
+
+
+/* Homepage styles */
+#homepage{
+	text-align: center;
+	margin: 0 auto;
+	font: Oldtown, fantasy;
+}
+
+
+/* New Account Styles */
+
 #create_acc{
 	text-align: center;
 	font: sans-serif;
@@ -27,7 +44,7 @@
 	background: #6ED1E5;
 	margin-top: 5px;
 	margin: 0 auto;
-	width: 350px;
+	width: 375px;
 }
 
 .new_owner_form legend {
@@ -40,7 +57,7 @@
 	margin-bottom: 0.3em;
 }
 
-form label {
+.new_owner_form form label {
 	width: 120px;
 	float: left;
 	text-align: right;
@@ -53,10 +70,73 @@ form label {
 	padding: .5px;
 	background-color: white;
 	margin-top: 10px;
-} 
+}
+
+.new_owner_form input{
+	width: 175px;
+}
 
 .actions .submit {
 	margin: 0 auto;
-/*	padding: 10px;*/
 	width: 100%;
 }
+
+#sub{
+	text-align: center;
+}
+
+
+/* Owners Index Styles */
+
+
+#current_visitors{
+	text-align: center;
+}
+
+#all_owners{
+	text-align: center;
+}
+
+#owners_list{
+	width: 100%;
+}
+
+#check_in_title{
+	margin: 0 auto;
+}
+
+/*#check_border{
+	border: 1px white solid;
+	background-color: white;
+	width: 170px;
+	padding: 3px;
+}*/
+
+
+/*[css].classname {
+color: #333333;
+font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+}[/css]*/
+
+.checkin_Test{
+color: #333333;
+font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+}/*[/css]*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

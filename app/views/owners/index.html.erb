@@ -1,2 +1,20 @@
-<h1>Owners#index</h1>
-<p>Find me in app/views/owners/index.html.erb</p>
+<div class="owners_index">
+		<h3 id="current_visitors"> Current Dog Park Visitors </h3>
+		<ul id="all_owners">
+		<% @owners.each do |owner| %>
+			<li id="owners_list"><img src="<%= owner.profile_pic %>" onerror="this.src='/assets/profile_pic.jpg';" width ="70px"/> <%= owner.dog_name%></li>
+		<% end if @owners %>
+		
+
+		</ul>
+		<div id="check_border">
+			<h3 id="check_in_title"> Checking in? </h3>
+			<%= form_for Owner.new do |f| %>
+				<%= f.label "I'm at the dog park" %>
+				<%= f.check_box :last_checkin %>
+			<% end %>
+		</div>
+</div>
+
+
+
