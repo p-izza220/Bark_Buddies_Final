@@ -234,7 +234,7 @@
 }
 
 .boots_index{
-	padding-top: 5px;
+	padding: 10px;
 }
 
 
@@ -359,15 +359,20 @@
 	display: inline;
 }
 
-/*#edit_owner_form label{
-	margin-left: 0.5em;
-	padding: .5px;
-	margin-top: 10px;
-}*/
 
 #edit_owner_form input{
 		width: 175px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

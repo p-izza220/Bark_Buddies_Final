@@ -47,13 +47,12 @@ function handleCheckout(){
 		<div id="dog_pound" class="row">
 		<% @owners.each do |owner| %>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 boots_index<%= " temp_load" if @current_owner == owner %>">
-				<img src= "<%= owner.avatar.url %>" onerror="this.src='/assets/profile_pic.jpg';" width ="70px"/><br> <%= owner.dog_name%><br>
+				<img src= "<%= owner.avatar.url %>" onerror="this.src='/assets/profile_pic.jpg';" height ="85px"/><br> <%= owner.dog_name%><br>
 				checked in <%= time_ago_in_words(owner.last_checkin)%> ago </div>
 		<% end if @owners %>
 		</div>
 	</div>
 	</fieldset>
-
 <br>
 </div>
 
