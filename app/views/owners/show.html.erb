@@ -1,17 +1,26 @@
 <div class="acc_info">
-	<%= @current_owner.username %>
-	<%= @current_owner.dog_name %>
-	<div id="avatar_show">
-		<%= image_tag @current_owner.avatar.url(:thumb) %>
-	</div>
-</div>
+<br>
+<br>
+<br>
+	<fieldset id="owner_show_fieldset">
+		<legend id="owner_show_legend"> <%=@current_owner.username.titleize + "'s" + " " + "Account Information" %> </legend>
+			<div id="avatar_show">
+				<%= image_tag @current_owner.avatar.url, class: "avatar_image" %>
+			</div>
+			<div class="show_text">
+				 Username: <%= @current_owner.username %>
+			</div>
+			<div class="show_text">
+				 Pup's name: <%= @current_owner.dog_name %> 
+			</div>
+			<div class="show_text">
+				 Contact information: <%= @current_owner.contact %> 
+			</div>
+			<div id="edit_account_button" >
+				<%= button_to "Edit Account Information", owners_edit_path, class: "btn_style" %>
+			</div>
+	</fieldset>
 
-<div class="form-check">
-  <label class="form-check-label">
-  <h3 class="checkin_TEST"> Checking in? </h3>
-    <input class="form-check-input" type="checkbox" value="last_checkin">
-    
-  </label>
 </div>
 
 

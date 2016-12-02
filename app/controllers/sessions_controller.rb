@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
   	@owner = Owner.find_by(username: params[:username])
-  	if @owner.password_digest && @owner.try(:authenticate, params[:password])
+  	if @owner && @owner.password_digest && @owner.try(:authenticate, params[:password])
   		session[:owner_id] = @owner.id
   		redirect_to owners_url
   	else

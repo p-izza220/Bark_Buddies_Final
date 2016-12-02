@@ -1,12 +1,9 @@
-
 <div class="login_form">
-	<% if flash[:alert] %>
-	  <p id="notice"> <%= flash[:alert] %> </p>
-	<% end %>
-
+	<br>
+	<br>
 	<%= form_tag do %>
-	  <fieldset>
-	  	<legend> Please Log In </legend>
+	  <fieldset id="newSession_fieldset">
+	  	<legend id="newSession_legend"> Please Log In </legend>
 
 	      <div class="login_field">
 	     	 <%= label_tag :username, "Username:" %>
@@ -19,8 +16,12 @@
 	  	  </div>
 
 	  	  <div class="login_field">
-	  	  	<%= submit_tag "Log In" %>
+	  	  	<%= submit_tag "Log In", class: "login_btn" %>
 	  	  </div>
 	  </fieldset>
+	  <Br>
+	  <br>
+	  <div id ="error_message"><%= flash[:alert] if flash[:alert] %></div>
 	<% end %>  
 </div>
+

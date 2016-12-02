@@ -1,11 +1,11 @@
 <div>
 	<br>
 	<br>
+	<br>
+	<br>
 	<h1 id="homepage"> Bark Buddies </h1>
 	<div class="container-fluid">
 			<div id="textboxes">
-				<br>
-				<br>
 				<br>
 				<hr class="hr">
 				<br>
@@ -26,6 +26,14 @@
 					<br>
 			</div>
 					<hr class="hr">
+			<div class="button_control">
+				<%= link_to login_url do
+				button_tag "Sign In", id: "sign_in_index"
+				end %> 
+				<%= link_to owners_new_url do
+				button_tag "Sign Up", id: "sign_up_index"
+				end %>
+			</div>
 					<br>
 					<br>
 		</div>

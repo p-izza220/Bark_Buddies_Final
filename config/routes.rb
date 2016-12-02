@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get "/owners/new"			=> "owners#new", as: "owners_new"
   post "/owners"			=> "owners#create"
   get "/owners/:id"			=> "owners#show", as: "owners_show"
-  get "/owners/:id/edit"	=> "owners#edit"
+  get "/owners/:id/edit"	=> "owners#edit", as: "owners_edit"
   put "/owners/:id"			=> "owners#update"
   patch "/owners/:id"     	=> "owners#update"
   delete "/owners/:id"		=> "owners#destroy"
@@ -32,5 +32,7 @@ Rails.application.routes.draw do
   get "/sessions"		=> "sessions#new", as: "login"
   post "/sessions"			=> "sessions#create"
   delete "/sessions"  	=> "sessions#destroy", as: "logout" 
+
+  get "/checkin"      => "owners#checkin_with_cam"
 
 end

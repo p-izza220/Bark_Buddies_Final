@@ -19,12 +19,15 @@ class OwnersController < ApplicationController
 
 	end
 
+	def checkin_with_cam
+		#to do: add the update to checkin here (rails c syntax)
+	end
+
 	def checkin
 		if session[:owner_id]
 			Owner.find(session[:owner_id]).update(last_checkin: Date.new )
 		else
-			# bounce to homepage
-			redirect_to root_route
+			redirect_to root_route, alert: "Incorrect username/password combination"
 		end
 	end	
 

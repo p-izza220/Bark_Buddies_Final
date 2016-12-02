@@ -1,31 +1,31 @@
+<div id="account_wrapper">
 <br>
 <br>
 <h1 id="create_acc"> Create An Account </h1>
-<br>
 <div class="new_owner_form">
 	<%= form_for @owner, html: {multipart: true} do |f| %>
-	<fieldset>
+	<fieldset id="create_fieldset">
 		<legend id="acc_legend"> Enter Account Details: </legend>
 
 			<div class="field">
 				<%= f.label "Username:" %>
-				<%= f.text_field :username, size: 20 %>		
+				<%= f.text_field :username, size: 20, autocomplete: "off" %>		
 			</div>
 
 
 			<div class="field">
 				<%= f.label "Contact:" %>
-				<%= f.text_field :contact %>
+				<%= f.text_field :contact, autocomplete: "off" %>
 			</div>
 
 
 			<div class="field">
-				<%= f.label "Dog name:" %>
-				<%= f.text_field :dog_name %>
+				<%= f.label "Dog" + " " + "Name:" %>
+				<%= f.text_field :dog_name, autocomplete: "off" %>
 			</div>
 
 			<div class="field">
-				<%= f.label "Profile Picture:" %>
+				<%= f.label "Profile Picture:" + "   " %> 
 				<%= f.file_field :avatar %>
 			</div>
 
@@ -42,11 +42,11 @@
 			</div>
 
 
-			<div class="actions" class="submit">
+			<div class="actions" class="submit_newAcc">
 				<div id="sub"><%= f.submit "Create Account" %></div>
 			</div>
 
 		</fieldset>
 	<% end %>
 </div>
-
+</div>

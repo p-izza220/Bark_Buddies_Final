@@ -1,19 +1,38 @@
-<div class="owners_index">
-		<h3 id="current_visitors"> Current Dog Park Visitors </h3>
-		<ul id="all_owners">
-		<% @owners.each do |owner| %>
-			<ul id="owners_list"><img src="<%= owner.profile_pic %>" onerror="this.src='/assets/profile_pic.jpg';" width ="70px"/><br> <%= owner.dog_name%><br>
-			checked in <%= time_ago_in_words(owner.last_checkin)%> ago </ul>
-		<% end if @owners %>
-		
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+	document.getElementById("checkin_with_cam").addEventListener("click",function(){
+		$.ajax({
+		  url: "/checkin",
+		  method: "GET"
+		}).done(function() {
+		  $("#checkin_with_cam").html( "Checked In!" );
+		});
+	});
+});
+</script>
 
-		</ul>
-		
-		<div id="check_border">
-			<h3 id="check_in_title"> Checking in? </h3>
-			<%= form_for Owner.new do |f| %>
-				<%= f.label "I'm at the dog park", class: 'form-check-label' %>
-				<%= f.check_box :last_checkin, class: 'form-check-input', value: 'last_checkin' %>
-			<% end %>
+<div class="owners_index">
+	<br>
+	<br>
+	<div id="check_border">
+			<h6 id="check_in_title"> Let other dog owners know you're at the park </h6>
+		<button id="checkin_with_cam">Check In</button>
+	</div>
+	<br>
+	<br>
+	<fieldset id="checkin_fieldset">
+		<legend id="checkin_legend">Current Dog Park Visitors</legend>
+	<div class="container-fluid checked_in_owners">
+		<div class="row">
+		<% @owners.each do |owner| %>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 boots_index">
+				<img src= "<%= owner.avatar.url %>" onerror="this.src='/assets/profile_pic.jpg';" width ="70px"/><br> <%= owner.dog_name%><br>
+				checked in <%= time_ago_in_words(owner.last_checkin)%> ago </div>
+		<% end if @owners %>
 		</div>
+	</div>
+	</fieldset>
+
+<br>
 </div>
+

@@ -34,12 +34,15 @@
 #homepage{
 	text-align: center;
 	margin: 0 auto;
-/*	font: fantasy;*/
+/*	font-family: cursive;*/
+	font-size: 40px;
 	background-color: #84E8FB:
 	width: 80%; 
 }
 .textTitle{
 	text-align: center;
+/*	font-family: cursive;
+	font: Helvetica;*/
 }
 
 .textExp{
@@ -54,17 +57,27 @@
 
 
 /* New Account Styles */
-
+#account_wrapper{
+	background-color: #84E8FB;
+}
 #create_acc{
 	text-align: center;
 	font: sans-serif;
+}
+
+.new_owner_form {
+	text-align:center;
+}
+.new_owner {
+	display: inline-block;
+	width: 600px;
 }
 
 .new_owner_form fieldset {
 	background: #84E8FB;
 	margin-top: 5px;
 	margin: 0 auto;
-	width: 375px;
+	width: 390px;
 }
 
 .new_owner_form legend {
@@ -79,9 +92,9 @@
 
 .new_owner_form form label {
 	width: 120px;
-	float: left;
+/*	float: left;*/
 	text-align: right;
-	display: block;
+	display: inline-block;
 	margin-top: 10px;
 }
 
@@ -92,8 +105,13 @@
 	margin-top: 10px;
 }
 
-.new_owner_form input{
+#owner_avatar{
 	width: 175px;
+	height: 25px;
+	margin-bottom: 0;
+	margin-left: 3px;
+	display: inline;
+
 }
 
 .actions .submit {
@@ -102,6 +120,64 @@
 }
 
 #sub{
+	text-align: center;
+}
+
+.new_owner_form input {
+	width: 175px;
+}
+
+
+
+#create_fieldset{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 600px;
+	padding: 5 10px;
+	margin-left: 25px;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+}
+
+#acc_legend{
+	border-bottom:0;
+	width:auto !important;
+}
+
+
+/* New Session Styles */
+#newSession_fieldset{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 450px;
+	padding: 5 10px;
+	margin-left: 25px;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+    margin: 0 auto;
+}
+
+#newSession_legend{
+	border-bottom: 0px;
+	width:auto !important;
+	padding: 0.2em 1em;
+}
+
+.login_btn{
+	border: 1px solid #000;
+	border-radius: 2px;
+	background-color:  #ABEBFF;
+/*	padding: 1em 2em;*/
+	padding: 4px;
+    vertical-align: middle;
+
+}
+
+#error_message{
 	text-align: center;
 }
 
@@ -117,29 +193,79 @@
 	text-align: left;
 }
 
-#owners_list{
-	width: 100%;
+.checked_in_owners{
+	margin: 0 80px;
+	text-align: center;
 }
 
 #check_in_title{
 	margin: 0 auto;
+	font-family: cursive;
+}
+
+#check_border{
+	text-align: center;
+}
+
+#dogpark_checkin{
+	font-size: 12px;
+	font: 
 }
 
 /*#check_border{
+	background-color: lightgray !important;
 	position: relative;
 	border: .1px solid #09418A;
 }*/
 
+#checkin_fieldset {
+	border: 1px groove #ddd;
+	padding: 0 1.4em 1.4em 1.4em;
+	max-width: 900px;
+	padding: 5 10px;
+	margin: 0 auto;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+}
+#checkin_legend{
+	border-bottom:0;
+	width:auto !important;
+	text-align: center;
+}
+
+.boots_index{
+	padding-top: 5px;
+}
 
 
+#sign_in_index,
+#sign_up_index{
+	border: 1px solid #000;
+	border-radius: 5px;
+    width: 115px;
+    min-height: 50px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+/*    margin: 1em;*/
+    padding: 1em 2em;
+    background: #ABEBFF;
+    vertical-align: middle;
+/*    position: relative;*/
+    z-index: 1;
+	padding-bottom: 14px;
+	text-align: center;
+	margin: 0 auto;
+	margin-right: 10px;
 
-.checkin_Test{
-color: #333333;
-font-family: Copperplate / Copperplate Gothic Light, sans-serif;
-}/*[/css]*/
+}
 
+.button_control{
+	text-align: center;
+/*	margin: 0 550px;*/
 
-
+}
 
 @media(max-width: 767px){
 	.homepage_wrapper{
@@ -147,15 +273,50 @@ font-family: Copperplate / Copperplate Gothic Light, sans-serif;
 	}
 }
 
+/* Owners Show Styles */
+#owner_show_fieldset{
+	border: 1px groove #ddd;
+	padding: 0 1.4em 1.4em 1.4em;
+	max-width: 700px;
+	padding: 5 10px;
+	margin: 0 auto;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+}
 
+#owner_show_legend{
+	border-bottom:0;
+	width:auto !important;
+	text-align: center;
+	padding: 0.2em 1em;
+}
 
+.show_text{
+	text-align: center;
+}
 
+#avatar_show{
+	text-align: center;
+	padding-bottom: 5px;
+}
 
+.avatar_image{
+	max-width: 200px;
+}
 
+#edit_account_button{
+	text-align: center;
+/*	max-width: 160px;*/
+}
 
+.btn_style{
+	border: 1px solid #000;
+	border-radius: 2px;
+	background-color:  #ABEBFF;
+	padding: 1em 2em;
+    vertical-align: middle;
 
-
-
+}
 
 
 
