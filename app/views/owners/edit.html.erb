@@ -1,0 +1,57 @@
+<div id="edit_owner_wrapper">
+	<br>
+	<br>
+	<h1 id="edit_title"> Update Your Account </h1>
+	<br>
+	<br>
+	<fieldset id="edit_fieldset">
+		<legend id="edit_legend"> Account Details </legend>
+		<div id="edit_owner_form">
+		<%= form_for @owner, url: owners_update_path(@owner) do |f| %>
+			<div class="edit_field">
+				<%= f.label "Username:" %>
+				<%= f.text_field :username, size: 20, autocomplete: "off" %>		
+			</div>
+
+
+			<div class="edit_field">
+				<%= f.label "Contact:" %>
+				<%= f.text_field :contact, autocomplete: "off" %>
+			</div>
+
+
+			<div class="edit_field">
+				<%= f.label "Dog" + " " + "Name:" %>
+				<%= f.text_field :dog_name, autocomplete: "off" %>
+			</div>
+
+			<div class="edit_field">
+				<%= f.label "Profile Picture:" + "   " %> 
+				<%= f.file_field :avatar, id: "owner_avatar_edit" %>
+			</div>
+
+
+			<div class="edit_field">
+				<%= f.label "Password:" %>
+				<%= f.password_field :password, autocomplete: "off" %>
+			</div>
+
+
+			<div class="edit_field">
+				<%= f.label :password_confirmation, "Confirm:" %>
+				<%= f.password_field :password_confirmation, autocomplete: "off" %>
+			</div>
+
+			<div class="edit_field">
+			<%= f.submit "Save Changes", class: "btn_style" %>
+			</div>
+		<% end %>	
+	</fieldset>
+	<br>
+	<br>
+	<div id ="error_message"><%= flash[:alert] if flash[:alert] %></div>
+
+
+	</div>
+</div>
+

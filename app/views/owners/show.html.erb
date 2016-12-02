@@ -17,10 +17,14 @@
 				 Contact information: <%= @current_owner.contact %> 
 			</div>
 			<div id="edit_account_button" >
-				<%= button_to "Edit Account Information", owners_edit_path, class: "btn_style" %>
+				<%= button_to "Edit Account Information", owners_edit_path, class: "btn_style", method: :get %>
 			</div>
 	</fieldset>
 
+	<div id ="error_message"><%= flash[:alert] if flash[:alert] %></div>
+
 </div>
+
+
 
 

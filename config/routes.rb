@@ -17,15 +17,15 @@ Rails.application.routes.draw do
   # get 'owners/edit'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "/"             => "welcome#index", as: "/"
+  get "/"                 => "welcome#index", as: "/"
 
 
-  get "/owners"				  => "owners#index", as: "owners"
-  get "/owners/new"			=> "owners#new", as: "owners_new"
-  post "/owners"			=> "owners#create"
+  get "/owners"				    => "owners#index", as: "owner"
+  get "/owners/new"			  => "owners#new", as: "owners_new"
+  post "/owners"			    => "owners#create"
   get "/owners/:id"			=> "owners#show", as: "owners_show"
   get "/owners/:id/edit"	=> "owners#edit", as: "owners_edit"
-  put "/owners/:id"			=> "owners#update"
+  put "/owners/:id"			=> "owners#update", as: "owners_update"
   patch "/owners/:id"     	=> "owners#update"
   delete "/owners/:id"		=> "owners#destroy"
 
@@ -34,5 +34,6 @@ Rails.application.routes.draw do
   delete "/sessions"  	=> "sessions#destroy", as: "logout" 
 
   get "/checkin"      => "owners#checkin_with_cam"
+  get "/checkout"       => "owners#checkout"
 
 end

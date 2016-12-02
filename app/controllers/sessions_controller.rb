@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
   	session[:owner_id] = nil
-  	redirect_to login_url, notice: "You have successfully logged out."
+  	redirect_to login_url, alert: "You have successfully logged out."
   end
 end

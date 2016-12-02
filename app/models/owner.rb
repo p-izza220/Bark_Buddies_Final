@@ -7,6 +7,7 @@ class Owner < ApplicationRecord
    validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
    def checkedIn?
-   	 self.last_checkin > Time.now - 2.hours 
+   	 self.last_checkin && self.last_checkin > Time.now - 2.hours 
    end
+
 end
