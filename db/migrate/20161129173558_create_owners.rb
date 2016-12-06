@@ -3,7 +3,7 @@ class CreateOwners < ActiveRecord::Migration[5.0]
     create_table :owners do |t|
       t.string :username
       t.string :password_digest
-      t.string :contact
+      t.string :email
       t.string :dog_name
       t.binary :profile_pic
       t.datetime :last_checkin

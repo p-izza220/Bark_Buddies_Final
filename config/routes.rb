@@ -1,23 +1,11 @@
 Rails.application.routes.draw do
   
-  # get 'welcome/index'
 
-  # get 'sessions/new'
-
-  # get 'sessions/create'
-
-  # get 'sessions/destroy'
-
-  # get 'owners/index'
-
-  # get 'owners/new'
-
-  # get 'owners/show'
-
-  # get 'owners/edit'
+  # get "password_resets/new"   => "password_resets#new"
+  # get "password_resets/edit/:id"  => "password_resets#edit"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "/"                 => "welcome#index", as: "/"
+  get "/"                 => "welcome#index", as: "home"
 
 
   get "/owners"				    => "owners#index", as: "owner"
@@ -36,4 +24,6 @@ Rails.application.routes.draw do
   get "/checkin"      => "owners#checkin_with_cam"
   get "/checkout"       => "owners#checkout"
 
+
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end

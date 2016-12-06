@@ -1,18 +1,21 @@
 <div class="login_form">
 	<br>
 	<br>
+	 <h1 class="always_title"> Bark Buddies </h1>
+	<br>
+	<br>
 	<%= form_tag do %>
 	  <fieldset id="newSession_fieldset">
 	  	<legend id="newSession_legend"> Please Log In </legend>
 
 	      <div class="login_field">
 	     	 <%= label_tag :username, "Username:" %>
-	     	 <%= text_field_tag :username, params[:username] %>
+	     	 <%= text_field_tag :username, params[:username], autocomplete: "off" %>
 	  	  </div>
 
 	  	  <div class="login_field">
-	  	  	<%= label_tag :password, "Password:" %>
-	  	  	<%= password_field_tag :password, params[:password] %>
+	  	  	<%= label_tag :password, "Password:" + " " %>
+	  	  	<%= password_field_tag :password, params[:password], autocomplete: "off" %>
 	  	  </div>
 
 	  	  <div class="login_field">
@@ -24,4 +27,6 @@
 	  <div id ="error_message"><%= flash[:alert] if flash[:alert] %></div>
 	<% end %>  
 </div>
+
+
 

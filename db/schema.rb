@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129175720) do
+ActiveRecord::Schema.define(version: 20161206162714) do
 
   create_table "owners", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.string   "contact"
+    t.string   "email"
     t.string   "dog_name"
     t.binary   "profile_pic"
     t.datetime "last_checkin"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20161129175720) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end

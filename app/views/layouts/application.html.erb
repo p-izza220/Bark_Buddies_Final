@@ -35,25 +35,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-
   <body id="body_style">
     <% if session[:owner_id] != nil %>
-      <nav>
-        <div>
-          <ul class="nav navbar-nav pull-right" id="navlinks">
-          | <%= link_to "Current Visitors", owners_path %>
-          | <%= link_to "My Profile", owners_show_path(session[:owner_id]) %> |
-          <%= link_to "Sign Out", logout_path, method: :delete %> |
-          </ul>
-    <% else %>
-          <ul class="nav navbar-nav pull-right">
-          | <%= link_to "Sign In", login_path %> |
-          <%= link_to "Sign Up", owners_new_path %> |  
+    <nav id="navbar-main">
+      <div>
+        <ul class="nav navbar-nav pull-right" id="navlinks">
+          <%= link_to "Current Visitors", owners_path %> &nbsp;
+          <%= link_to "My Profile", owners_show_path(session[:owner_id]) %> &nbsp;
+          <%= link_to "Sign Out", login_path, method: :delete %> <br> 
+          <%= form_tag(owners_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search visitors...", class: "search-input" %>
+          <%= submit_tag "Search", :name => nil, class: "search-btn" %>
+      <% end %>
+        </ul>
+      </div>
+    </nav>
     <% end %>
-          </ul>
-        </div>
-      </nav>
     <%= yield %>
   </body>
 </html>

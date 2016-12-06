@@ -1,3 +1,9 @@
+  <br>
+  <br>
+
+  <h1 class="always_title"> Bark Buddies </h1>
+  <br>
+<br>
 <div id="edit_owner_wrapper">
 	<br>
 	<br>
@@ -15,8 +21,8 @@
 
 
 			<div class="edit_field">
-				<%= f.label "Contact:" %>
-				<%= f.text_field :contact, autocomplete: "off" %>
+				<%= f.label "Email:" %>
+				<%= f.text_field :email, autocomplete: "off" %>
 			</div>
 
 
@@ -43,7 +49,7 @@
 			</div>
 
 			<div class="edit_field">
-			<%= f.submit "Save Changes", class: "btn_style" %>
+			<%= f.submit "Save Changes", class: "btn_style_edit" %>
 			</div>
 		<% end %>	
 	</fieldset>

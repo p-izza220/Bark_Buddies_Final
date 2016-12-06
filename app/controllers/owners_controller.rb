@@ -2,6 +2,11 @@ class OwnersController < ApplicationController
 	def index
 		@owners = Owner.where(last_checkin: 2.hours.ago..Time.now).order(:last_checkin => :desc)
 		@current_owner = Owner.find(session[:owner_id])
+		if params[:search]
+			@owners = Owner.search(params[:search]).where(last_checkin: 2.hours.ago..Time.now).order(:last_checkin => :desc)
+		else
+			@owners = Owner.where(last_checkin: 2.hours.ago..Time.now).order(:last_checkin => :desc)
+		end
 	end
 
 	def new
