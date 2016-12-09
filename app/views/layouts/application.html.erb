@@ -36,21 +36,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body id="body_style">
+   <div id="navwrap">
     <% if session[:owner_id] != nil %>
     <nav id="navbar-main">
-      <div>
         <ul class="nav navbar-nav pull-right" id="navlinks">
-          <%= link_to "Current Visitors", owners_path %> &nbsp;
-          <%= link_to "My Profile", owners_show_path(session[:owner_id]) %> &nbsp;
-          <%= link_to "Sign Out", login_path, method: :delete %> <br> 
+          <%= link_to "The Rules", the_rules_path, class: "linkers" %> &nbsp;
+          <%= link_to "Current Visitors", owners_path, class: "linkers" %> &nbsp;
+          <%= link_to "My Profile", owners_show_path(session[:owner_id]), class: "linkers" %> &nbsp;
+          <%= link_to "Sign Out", login_path, method: :delete, class: "linkers" %> <br> 
           <%= form_tag(owners_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search visitors...", class: "search-input" %>
           <%= submit_tag "Search", :name => nil, class: "search-btn" %>
       <% end %>
         </ul>
-      </div>
     </nav>
     <% end %>
+     </div>
     <%= yield %>
   </body>
 </html>

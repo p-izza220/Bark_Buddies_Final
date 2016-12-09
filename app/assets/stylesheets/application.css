@@ -15,9 +15,10 @@
  */
  						/* All Pages Style */
 *{
-	background-color: #8FC6FD;
+/*	background-color: #8FC6FD;*/
 	font-family: times, serif;
 }
+
 
 .hr{
 	border: solid #09418A .5px;
@@ -26,6 +27,7 @@
 
 #body_style{
 	background-color: #8FC6FD;
+
 }
 
 .search-btn{
@@ -36,14 +38,14 @@
 }
 
 .search-input{
-	width: 170px;
+	width: 190px;
 }
 
 .always_title{
 text-align: center;
 	margin: 0 auto;
-	font-family: times, serif;
-	font-size: 60px;
+	font-family: times, serif, bold;
+	font-size: 65px;
 
 
 }
@@ -54,8 +56,14 @@ text-align: center;
 	margin-right: 20px;
 	float: right;
 	padding-top: 5px;
-}
 
+}
+.linkers{
+	color: navy;
+	font-size: 14px;
+	font: bold;
+
+}
 
 
 				/* Homepage styles */
@@ -64,7 +72,7 @@ text-align: center;
 	width: 90%;
 }*/
 
-#homepage{
+#homepage_title{
 	text-align: center;
 	margin: 0 auto;
 /*	font-family: cursive;*/
@@ -85,6 +93,62 @@ text-align: center;
 	background-color: #8FC6FD;
 	max-width: 90%;
 	margin: 0 100px;  
+}
+
+								/* The Rules Styles */
+
+#rule-wrapper{
+	max-width: 90%;
+	margin-left: 5%;
+}
+
+#rules_title{
+	font-size: 45px;
+	text-align: center;
+}
+
+#all-rules{
+
+}
+.rules_dot{
+	font-size: 15px;
+}
+
+.hr-rule{
+
+	border: solid #09418A .5px;
+	width: 90%;
+}
+
+#rules-link{
+	background-color: white;
+	opacity: .6;
+	border-radius: 50%;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.text{
+	padding: 50px;
+	opacity: 1;
+	text-align: center;
+}
+
+.text-x{
+	padding-bottom: 40px;
+	opacity: 1;
+	text-align: center;
+}
+
+.format{
+	width: 95%;
+display: block;
+}
+
+.format-inset{
+	width: 80%;
+	margin-left: 9%;
+	font-size: 15px;
 }
 
 
@@ -244,6 +308,7 @@ text-align: center;
 	width: 265px;
 	padding-left: 10px;
 	text-align: center;
+
 }
 
 #dogpark_checkin{
@@ -252,19 +317,30 @@ text-align: center;
 
 
 #checkin_fieldset {
-	border: 2px groove #ddd;
+	border: 3.3px groove #ddd;
 	padding: 0 1.4em 1.4em 1.4em;
 	max-width: 900px;
 	padding: 5 10px;
 	margin: 0 auto;
     -webkit-box-shadow:  0px 0px 0px 0px #000;
     box-shadow:  0px 0px 0px 0px #000;
+
 }
+
 #checkin_legend{
 	border-bottom:0;
-	width:auto !important;
+	width: auto !important;
 	text-align: center;
-	padding: 0.2em 1em;
+	padding: 0.3em 1.2em;
+
+}
+
+#checkin_back{
+	max-width: 1050px;
+	border-radius: 10%;
+	display: block;
+	margin: 0 auto;
+
 }
 
 .boots_index{
