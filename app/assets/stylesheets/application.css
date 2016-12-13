@@ -31,18 +31,19 @@
 }
 
 .search-btn{
-	width: 60px;
+	width: 80px;
 	border-radius: 10px;
 	padding: 3px;
 	background-color: white;
 }
 
 .search-input{
-	width: 190px;
+	margin-left: 10px;
+	width: 180px;
 }
 
 .always_title{
-text-align: center;
+	text-align: center;
 	margin: 0 auto;
 	font-family: times, serif, bold;
 	font-size: 65px;
@@ -55,16 +56,18 @@ text-align: center;
 	text-align: right;
 	margin-right: 20px;
 	float: right;
-	padding-top: 5px;
+	padding-top: 10px;
 
 }
 .linkers{
 	color: navy;
-	font-size: 14px;
+	font-size: 16px;
 	font: bold;
-
 }
 
+#navwrap{
+
+}
 
 				/* Homepage styles */
 /*
@@ -278,6 +281,12 @@ display: block;
 
 								/* Owners Index Styles */
 
+.pagelink{
+	color: navy;
+	font-size: 14.5px;
+	text-decoration: underline;
+}
+
 
 #checkin_with_cam{
 	width: 75px;
@@ -301,7 +310,7 @@ display: block;
 
 #check_in_title{
 	margin: 0 auto;
-	float: left;
+	text-align: center;
 }
 
 #check_border{
@@ -379,6 +388,37 @@ display: block;
 	.homepage_wrapper{
 		margin: 0;
 	}
+
+	#check_border{
+	width: 275px;
+	padding-left: 10px;
+	padding-top: 20px;
+	margin: 0 auto;
+
+	}
+
+	.rule_link{
+		display: none;
+	}
+}
+
+@media(max-width: 320px){
+		.rule_link{
+		display: none;
+	}
+
+	.settings_link{
+		display: none;
+	}
+
+		#check_border{
+	width: 265px;
+	padding-left: 10px;
+	padding-top: 20px;
+	margin: 0 auto;
+
+	}
+
 }
 
 				/* Owners Show Styles */
