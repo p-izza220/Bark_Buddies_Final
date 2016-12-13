@@ -402,6 +402,17 @@ display: block;
 	}
 }
 
+@media(max-width: 620px){
+	#check_border{
+	width: 200px;
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 30px;
+	margin: 0 auto;
+
+	}
+}
+
 @media(max-width: 320px){
 		.rule_link{
 		display: none;
