@@ -17,6 +17,7 @@
 *{
 /*	background-color: #8FC6FD;*/
 	font-family: times, serif;
+
 }
 
 
@@ -90,6 +91,7 @@
 
 .textExp{
 	text-align: center;
+
 }
 
 .homepage_wrapper{
@@ -97,6 +99,7 @@
 	max-width: 90%;
 	margin: 0 100px;  
 }
+
 
 								/* The Rules Styles */
 
@@ -209,6 +212,7 @@ display: block;
 	margin-bottom: 0;
 	margin-left: 3px;
 	display: inline;
+    image-orientation: from-image;
 
 }
 
@@ -457,6 +461,7 @@ display: block;
 #avatar_show{
 	text-align: center;
 	padding-bottom: 5px;
+    image-orientation: from-image;
 }
 
 .avatar_image{

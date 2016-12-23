@@ -4,7 +4,7 @@ class Owner < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   # validates :email, presence: true, uniqueness: true
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "65x65>"},
+  has_attached_file :avatar,
    :default_url => "/assets/profile_pic.jpg"
    validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 

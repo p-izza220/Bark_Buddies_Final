@@ -47,7 +47,8 @@
           <%= link_to "Current Visitors", owners_path, class: "linkers" %> &nbsp;
           <%= link_to "My Profile", owners_show_path(session[:owner_id]), class: "linkers" %> &nbsp;
           <%= link_to "Settings", owners_edit_path(session[:owner_id]), class: "linkers settings_link" %> &nbsp;
-          <%= link_to "Sign Out", login_path, method: :delete, class: "linkers" %> 
+          <%= link_to "Sign Out", login_path, method: :delete, class: "linkers" %>
+
       <% end %>
         </ul>
     </nav>
