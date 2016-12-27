@@ -91,7 +91,6 @@
 
 .textExp{
 	text-align: center;
-
 }
 
 .homepage_wrapper{
@@ -388,6 +387,13 @@ display: block;
 
 }
 
+@media(min-width: 1040px){
+	.homeEx{
+		margin-right: 50px;
+	}
+
+}
+
 @media(max-width: 767px){
 	.homepage_wrapper{
 		margin: 0;
@@ -403,6 +409,11 @@ display: block;
 
 	.rule_link{
 		display: none;
+	}
+
+	.homeEx{
+		margin-left: 50px;
+
 	}
 }
 
@@ -438,7 +449,7 @@ display: block;
 
 				/* Owners Show Styles */
 #owner_show_fieldset{
-	border: 1px groove #ddd;
+	border: 1.8px groove #ddd;
 	padding: 0 1.4em 1.4em 1.4em;
 	max-width: 700px;
 	padding: 5 10px;
@@ -448,7 +459,7 @@ display: block;
 }
 
 #owner_show_legend{
-	border-bottom:0;
+	border-bottom: 0;
 	width:auto !important;
 	text-align: center;
 	padding: 0.2em 1em;
