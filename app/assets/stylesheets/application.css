@@ -394,6 +394,12 @@ display: block;
 
 }
 
+@media(max-width: 935px){
+	#checkin_fieldset{
+		margin: 10px;
+	}
+}
+
 @media(max-width: 767px){
 	.homepage_wrapper{
 		margin: 0;
